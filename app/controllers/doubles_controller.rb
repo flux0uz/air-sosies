@@ -1,0 +1,2 @@
+class DoublesController < ApplicationController
+end
