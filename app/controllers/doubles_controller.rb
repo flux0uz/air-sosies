@@ -1,11 +1,11 @@
 class DoublesController < ApplicationController
 
-  def Index
+  def index
     @doubles = Double.all
   end
 
-  def Show
-    @double = Double.find(parmas[:id])
+  def show
+    @double = Double.find(params[:id])
   end
 
 end
