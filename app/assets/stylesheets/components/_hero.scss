@@ -1,0 +1,22 @@
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),asset-url('sosies-bg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  .text-header {
+    height: 100%;
+    h1 {
+      font-size: 62px;
+      font-weight: bold;
+      color: $white;
+    }
+  }
+  .down-arrow {
+    font-size: 32px;
+    margin-top: -80px;
+    a {
+      color: $white;
+    }
+  }
+}
