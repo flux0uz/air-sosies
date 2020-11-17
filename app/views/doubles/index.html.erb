@@ -1,5 +1,5 @@
 <% @doubles.each do |double| %>
-  <h2><%= double.name %></h2>
+  <h2><%= link_to double.name, double_path(double) %></h2>
   <ul>
     <li><p><%= double.price %></p></li>
     <li><p><%= double.address %></p></li>

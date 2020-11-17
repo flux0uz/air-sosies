@@ -2,3 +2,6 @@
 <h4><%= @double.price %></h4>
 <p><%= @double.description %></p>
 <p><%= @double.address %></p>
+
+<%= link_to "Update", edit_double_path %>
+<%= link_to "Delete", double_path(@double), method: :delete, data: { confirm:"Are you sure?" } %>
