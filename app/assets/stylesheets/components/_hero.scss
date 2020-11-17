@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 65px);;
   .text-header {
     height: 100%;
     h1 {

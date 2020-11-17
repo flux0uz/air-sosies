@@ -22,13 +22,3 @@ Double.create(price: 120, user_id: argentina.id, name: 'Johnny Hapalidee', addre
 Double.create(price: 200, user_id: argentina.id, name: 'Momo Mathie', address: '41 rue jobin, 13003 Marseille', description: 'En 2004, le public découvre Christophe Maé dans la comédie musicale «  le Roi Soleil ». Il interprète alors le frère du Roi (interprété par Emmanuel MOIRE). En 2007, il sort son premier album solo. Et c\'est un succès ! Parallèlement, son sosie français s\'épanouit auprès des stars du show-biz en tant que guitariste professionnel, mais rares sont les jours où il ne se fait pas interpeler dans la rue par des passants le prenant pour le chanteur… Ce n’est pourtant qu’en 2009 qu’il décide de franchir le pas… Il se lance alors sur TF1 lors de l’émission « Qui sera le meilleur sosie ». Suite à son passage dans l’émission où le public a pu découvrir sa forte ressemblance avec l’artiste, il développe en quelques mois cette toute nouvelle carrière, et reprend les plus belles chansons du chanteur aux quatre coins de la France pour le plus grand plaisir du public.', image_URL: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.francedimanche.fr%2Ftemoignages%2Fdepuis-que-je-ressemble-a-mimie-mathy-je-me-sens-enfin-bien-dans-ma-peau&psig=AOvVaw3K5cPA3gdFQHvWr67efG6-&ust=1605700387057000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCID3_qHCie0CFQAAAAAdAAAAABAI", category: 'CINEMA')
 puts "ending seed for users"
 
-
-
-
-
-
-
-Envoyer un message à Guillaume Potier
-
-
-
