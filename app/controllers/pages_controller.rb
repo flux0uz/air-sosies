@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def dashboard
+    @doubles = current_user.doubles
+  end
 end

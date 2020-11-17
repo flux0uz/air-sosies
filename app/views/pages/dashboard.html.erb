@@ -1,0 +1,34 @@
+<div class="container my-5">
+  <div class="welcome-heading d-flex justify-content-between align-items-start">
+    <div class="welcome-text">
+      <h1>Hello <%= current_user.username %></h1>
+      <p>Nice to see you again!</p>
+    </div>
+    <div class="welcome-tabs">
+      <ul class="list-inline tabs-underlined">
+        <li>
+          <a href="#" class="tab-underlined active">My account</a>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">My doppelsgangers</a>
+        </li>
+        <li>
+          <a href="#" class="tab-underlined">My bookings</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="doppel hidden my-5">
+    <% @doubles.each do |double| %>
+      <div class="double-card">
+        <h3><%= double.name %></h3>
+        <p>
+          <%= truncate double.description, length: 200 %>
+          <%= link_to 'more', double %>
+        </p>
+        <p><%= double.price %>€ /jour</p>
+      </div>
+    <% end %>
+  </div>
+</div>
