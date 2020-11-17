@@ -1,13 +1,8 @@
-<div class="container m-5 p-5">
-  <div class="grid-index">
-    <% @doubles.each do |double| %>
-      <%= link_to double_path(double) do %>
-            <div class="card">
-              <h3><%= double.name %></h3>
-              <p><%= double.category %></p>
-              <p><%= double.address %></p>
-            </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+<% @doubles.each do |double| %>
+  <h2><%= link_to double.name, double_path(double) %></h2>
+  <ul>
+    <li><p><%= double.price %></p></li>
+    <li><p><%= double.address %></p></li>
+    <li><p><%= double.category %></p></li>
+  </ul>
+<% end %>
