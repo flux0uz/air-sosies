@@ -28,6 +28,22 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+// Smooth Scrolling
+$('.hero a').on('click', function (e) {
+  if (this.hash !== '') {
+      e.preventDefault();
+
+      const hash = this.hash;
+
+      $('html, body').animate({
+              scrollTop: $(hash).offset().top - 100,
+          },
+          800
+      );
+  }
+});
+//End
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
