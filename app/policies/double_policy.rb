@@ -14,7 +14,7 @@ class DoublePolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    record.user == user
   end
 
   def destroy?
