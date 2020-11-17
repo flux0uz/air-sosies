@@ -1,11 +1,12 @@
 class DoublesController < ApplicationController
 
   def index
-    @doubles = Double.all
+    @doubles = policy_scope(Double)
   end
 
   def show
     @double = Double.find(params[:id])
+    authorize @double
   end
 
 end
