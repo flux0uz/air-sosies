@@ -1,12 +1,21 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    authorize @booking
+    @double = Double.find(params[:double_id])
   end
 
   def create
     @booking = Booking.new(booking_info)
-    @booking.save
-    redirect_to dashboard_path
+    @booking.user = current_user
+    authorize @booking
+    @double = Double.find(params[:double_id])
+    @booking.double = @double
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render "new"
+    end
   end
 
   def destroy
@@ -18,6 +27,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_info
-    params.require(:booking).permit(:start_date, :end_date, :user_id, :double_id, :total_price)
+    params.require(:booking).permit(:start_date, :end_date, :user_id, :total_price)
   end
 end
