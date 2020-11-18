@@ -1,8 +1,14 @@
 #categories {
+
+  .row {
+    margin: 0 auto;
+  }
+
   .cards {
   height: 200px;
   margin-bottom: 20px;
   overflow: hidden;
+  color: white;
   }
 
   .card {
