@@ -1,15 +1,20 @@
-<div class="container m-5">
+<div class="main-container m-5">
   <div class="grid-index m-3">
     <% @doubles.each do |double| %>
       <%= link_to double_path(double) do %>
-        <div class="card">
-          <h2><%= double.name %></h2>
-          <p><%= double.price %></p>
-          <p><%= double.address %></p>
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+          <img class="card-img-top" src="<%= double.image_URL %>" alt="Discover the double">
+            <div class="card-body">
+              <h5 class="card-title"><%= double.name %></h5>
+              <h6 class="card-subtitle"><%= double.price %></h6>
+              <p class="card-text"><%= double.address %></p>
+            </div>
         </div>
       <% end %>
     <% end %>
   </div>
+  <!-- @guigui : faire le JS, installer la gem, et remplir le html.erb en mode texte à trou avec le token et le style -->
+  <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoid2lsb3d3d3ciLCJhIjoiY2tnd2VpMnJnMDlmODJ4bWlmMGoxbTc5aiJ9.W_yrPsFE7YQQnyvL6OYGLg'>
 </div>
 
 
