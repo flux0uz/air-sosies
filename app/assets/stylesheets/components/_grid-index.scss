@@ -1,6 +1,5 @@
 .main-container {
   display: flex;
-  // width: 90%;
 }
 
 .grid-index {
@@ -9,12 +8,20 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   grid-template-rows: auto;
-  margin: 10px;
+  margin: 0 10px;
+
+  img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    object-position: top;
+  }
 
   .card {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    height: 400px;
   }
 
   @media(max-width: 992px) {

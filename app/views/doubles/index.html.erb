@@ -1,9 +1,9 @@
-<div class="main-container">
+<div class="main-container my-5">
   <div class="grid-index">
     <% @doubles.each do |double| %>
       <%= link_to double_path(double) do %>
         <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
-          <img class="card-img-top" src="<%= double.image_URL %>" alt="Discover the double">
+          <%= image_tag double.image_URL, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title"><%= double.name %></h5>
               <h6 class="card-subtitle"><%= double.price %></h6>
