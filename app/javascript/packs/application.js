@@ -3,10 +3,10 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+require("@rails/ujs").start();
+require("turbolinks").start();
+require("@rails/activestorage").start();
+require("channels");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -50,6 +50,9 @@ $('.hero a').on('click', function (e) {
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
+  initAutocomplete();
+  
   const doppelTab = document.querySelector('#doppel');
   doppelTab.addEventListener('click', (event) => {
     event.preventDefault();
@@ -68,6 +71,4 @@ document.addEventListener('turbolinks:load', () => {
     document.querySelector('.booking').classList.remove('hidden');
   });
 
-  initMapbox();
-  initAutocomplete();
 });
