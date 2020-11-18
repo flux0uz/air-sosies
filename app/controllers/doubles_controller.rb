@@ -2,6 +2,15 @@ class DoublesController < ApplicationController
   before_action :set_double, only: [ :show, :edit, :update, :destroy ]
   def index
     @doubles = policy_scope(Double)
+
+    @markers = @doubles.geocoded.map do |double|
+      {
+        lat: double.latitude,
+        lng: double.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { double: double })
+        # image_url: helpers.asset_url('REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS')
+      }
+    end
   end
 
   def show

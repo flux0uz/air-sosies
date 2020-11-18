@@ -1,14 +1,15 @@
 .main-container {
   display: flex;
-  width: 90%;
+  // width: 90%;
 }
 
 .grid-index {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
   grid-template-rows: auto;
+  margin: 10px;
 
   .card {
     display: flex;
