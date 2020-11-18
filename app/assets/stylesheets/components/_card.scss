@@ -50,3 +50,23 @@
   background-position: center;
   background-size: cover;
 }
+
+.dash-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  margin: 40px 0;
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px rgba(0,0,0,.1);
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .dash-card-infos {
+    width: 60%;
+  }
+}
