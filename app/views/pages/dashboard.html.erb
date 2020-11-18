@@ -2,32 +2,66 @@
   <div class="welcome-heading d-flex justify-content-between align-items-start">
     <div class="welcome-text">
       <h1>Hello <%= current_user.username %></h1>
-      <p>Nice to see you again!</p>
+      <h4>Nice to see you again!</h4>
     </div>
     <div class="welcome-tabs">
       <ul class="list-inline tabs-underlined">
         <li>
-          <a href="#" class="tab-underlined active">My account</a>
+          <a href="#" id="booking" class="tab-underlined active">Bookings</a>
         </li>
         <li>
-          <a href="#" class="tab-underlined">My doppelsgangers</a>
-        </li>
-        <li>
-          <a href="#" class="tab-underlined">My bookings</a>
+          <a href="#" id="doppel" class="tab-underlined">DoppelsGangers</a>
         </li>
       </ul>
     </div>
   </div>
 
+  <div class="booking my-5">
+    <% if current_user.bookings.size > 0 %>
+      <% @bookings.each do |booking| %>
+        <div class="dash-card">
+          <div class="dash-card-infos">
+            <h3><%= booking.double.name %></h3>
+            <p><strong>From</strong> <span class="text-muted"><%= booking.start_date %></span></p>
+            <p><strong>To</strong> <span class="text-muted"><%= booking.end_date %></span></p>
+            <p>
+              <%= truncate booking.double.description, length: 200 %>
+              <%= link_to 'more', double_path(booking.double) %>
+            </p>
+            <p><strong>Total price</strong>: <%= booking.double.price %>€</p>
+          </div>
+          <div class="dash-card-img">
+            <%= image_tag booking.double.image_URL %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="booking-card">
+        <h4>You don't have any booking yet!</h4>
+      </div>
+    <% end %>
+  </div>
+
   <div class="doppel hidden my-5">
-    <% @doubles.each do |double| %>
+    <% if current_user.doubles.size > 0 %>
+      <% @doubles.each do |double| %>
+          <div class="dash-card">
+            <div class="dash-card-infos">
+              <h3><%= double.name %></h3>
+              <p>
+                <%= truncate double.description, length: 200 %>
+                <%= link_to 'more', double_path(double) %>
+              </p>
+              <p><%= double.price %>€ /jour</p>
+            </div>
+            <div class="dash-card-img">
+              <%= image_tag double.image_URL %>
+            </div>
+          </div>
+        <% end %>
+    <% else %>
       <div class="double-card">
-        <h3><%= double.name %></h3>
-        <p>
-          <%= truncate double.description, length: 200 %>
-          <%= link_to 'more', double %>
-        </p>
-        <p><%= double.price %>€ /jour</p>
+        <h4>You don't have any Doppelgangers yet!</h4>
       </div>
     <% end %>
   </div>
