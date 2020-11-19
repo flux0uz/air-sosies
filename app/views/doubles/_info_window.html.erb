@@ -1,6 +1,22 @@
 <div id="popup_content">
   <%= link_to double_path(double) do %>
-    <h2><%= double.name %></h2>
-    <p><%= double.address %></p>
+    <h5>
+      <%= double.name %>
+      <% case %>
+        <% when double.category == "Music" %>
+          <i class="fas fa-music"></i>
+        <% when double.category == "Cinema" %>
+          <i class="fas fa-film"></i>
+        <% when double.category == "Politic" %>
+          <i class="fas fa-handshake"></i>
+        <% when double.category == "Comedy" %>
+          <i class="fas fa-theater-masks"></i>
+        <% when double.category == "Tv" %>
+          <i class="fas fa-tv"></i>
+        <% when double.category == "Sport" %>
+          <i class="fas fa-futbol"></i>
+        <% end %>
+    </h5>
+    <p><i class="fas fa-map-marker-alt"></i> <%= double.address %></p>
   <% end %>
 </div>

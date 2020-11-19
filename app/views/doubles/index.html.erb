@@ -2,24 +2,24 @@
   <div class="grid-index">
     <% @doubles.each do |double| %>
       <%= link_to double_path(double) do %>
-        <div class="card shadow mb-5 bg-white rounded" style="width: 18rem;">
+        <div class="card shadow mb-5 bg-white" style="width: 18rem;">
           <%= image_tag double.image_URL, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title">                
                 <div id="card-name-category">
                   <%= double.name %>
                   <% case %>
-                    <% when double.category == "MUSIC" %>
+                    <% when double.category == "Music" %>
                       <i class="fas fa-music"></i>
-                    <% when double.category == "CINEMA" %>
+                    <% when double.category == "Cinema" %>
                       <i class="fas fa-film"></i>
-                    <% when double.category == "POLITIC" %>
+                    <% when double.category == "Politic" %>
                       <i class="fas fa-handshake"></i>
-                    <% when double.category == "COMEDY" %>
+                    <% when double.category == "Comedy" %>
                       <i class="fas fa-theater-masks"></i>
-                    <% when double.category == "TV" %>
+                    <% when double.category == "Tv" %>
                       <i class="fas fa-tv"></i>
-                    <% when double.category == "SPORT" %>
+                    <% when double.category == "Sport" %>
                       <i class="fas fa-futbol"></i>
                   <% end %>
                 </div>
