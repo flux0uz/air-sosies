@@ -1,7 +1,12 @@
-#map {
-  height: 100%;
+.map-container {
   position: sticky;
-  top: 0;
+  width: 40%;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 80px;
 }
 
 .mapboxgl-popup {

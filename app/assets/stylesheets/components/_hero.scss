@@ -17,6 +17,10 @@
     margin-top: -80px;
     a {
       color: $white;
+      transition: transform .4s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

@@ -6,22 +6,18 @@
           <%= image_tag double.image_URL, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title"><%= double.name %></h5>
-              <h6 class="card-subtitle"><%= double.price %></h6>
-              <p class="card-text"><%= double.address %></p>
+              <h6 class="card-subtitle py-1"><%= double.price %>€</h6>
+              <p class="card-text py-1"><%= double.address %></p>
             </div>
         </div>
       <% end %>
     <% end %>
   </div>
-
-  <div id="map" 
-    style="width: 100%; height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <div class="map-container">
+    <div id="map" 
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
-
-  <!-- @guigui : faire le JS, installer la gem, et remplir le html.erb en mode texte à trou avec le token et le style -->
-  <%# <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoid2lsb3d3d3ciLCJhIjoiY2tnd2VpMnJnMDlmODJ4bWlmMGoxbTc5aiJ9.W_yrPsFE7YQQnyvL6OYGLg'> %>
 </div>
-
-

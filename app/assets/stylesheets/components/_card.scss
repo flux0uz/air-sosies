@@ -5,10 +5,10 @@
   }
 
   .cards {
-  height: 200px;
-  margin-bottom: 20px;
-  overflow: hidden;
-  color: white;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    color: white;
   }
 
   .card {
@@ -19,7 +19,7 @@
 
   .card:hover,
   .card:focus{
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 
   .tv {
