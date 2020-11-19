@@ -11,6 +11,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @double = Double.find(params[:double_id])
     @booking.double = @double
+    @booking.total_price = (params[:booking][:end_date].to_date - params[:booking][:start_date].to_date).to_i * @double.price
     if @booking.save
       redirect_to dashboard_path
     else
