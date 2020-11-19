@@ -1,0 +1,44 @@
+.wrapper {
+  margin: 8px 0;
+}
+
+#query,
+#category,
+body > div.wrapper > form > input {
+  height: 60px;
+}
+
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#category {
+  min-width: 20px;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border: 1px;
+}
+
+#query {
+  min-width: 20px;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border: 1px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 1px solid #666;
+}
+
+.btnsub {
+  min-width: 20px;
+  padding: 8px;
+  margin: 0 4px 0 0;
+  border: 1px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
