@@ -1,0 +1,15 @@
+.btn-special {
+  background: linear-gradient(to right, #eb00bc 0%, #333399  51%, #eb00bc  100%);
+  color: $white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.6s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 3px;
+  padding: 10px 25px;
+  &:hover {
+    background-position: right center;
+    color: $white;
+  }
+}
