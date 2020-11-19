@@ -30,7 +30,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initTabs } from '../plugins/init_tabs';
-import "../plugins/flatpickr";
+import { calendarForm } from "../plugins/flatpickr";
 
 
 
@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   initTabs();
+  calendarForm();
 
   // Smooth Scrolling
   $('.hero a').on('click', function (e) {
