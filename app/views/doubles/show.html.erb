@@ -1,16 +1,18 @@
-<div class="showhtml">
   <div class="container my-5">
-    <div class="text">
-      <h1><%= @double.name %></h1>
-      <h3> Daily price: <%= @double.price %> $ </h3>
-      <h5><%= @double.address %></h5>
-      <p><%= @double.description %></p>
-      <p><%= link_to "Book your Doppleganger", new_double_booking_path(@double), class: "btn btn-primary"%></p>
+    <div class="doubles">
+      <div class="text">
+        <h1><%= @double.name %></h1>
+        <h3>Daily price: <%= @double.price %>€</h3>
+        <h5><%= @double.address %></h5>
+        <p><%= @double.description %></p>
+        <p><%= link_to "Book", new_double_booking_path(@double), class: "btn btn-special"%></p>
+      </div>
+      <div class="image">
+        <%= image_tag @double.image_URL %>
+      </div>
     </div>
-    <div class="image"> <%= image_tag @double.image_URL %></div>
     <% if policy(@double).edit? %>
       <%= link_to "Update", edit_double_path %>
       <%= link_to "Delete", double_path(@double), method: :delete, data: { confirm:"Are you sure?" } %>
     <% end %>
   </div>
-</div>
