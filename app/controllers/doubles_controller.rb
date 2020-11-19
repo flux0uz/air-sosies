@@ -15,6 +15,14 @@ class DoublesController < ApplicationController
 
   def show
     authorize @double
+    @booking = Booking.new
+    @bookings = Booking.where(double_id: @double.id)
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
 
   def new

@@ -1,18 +1,26 @@
-  <div class="container my-5">
-    <div class="doubles">
-      <div class="text">
-        <h1><%= @double.name %></h1>
-        <h3>Daily price: <%= @double.price %>€</h3>
-        <h5><%= @double.address %></h5>
-        <p><%= @double.description %></p>
-        <p><%= link_to "Book", new_double_booking_path(@double), class: "btn btn-special"%></p>
-      </div>
-      <div class="image">
-        <%= image_tag @double.image_URL %>
+<div class="container">
+  <div class="main-container my-5">
+    <div class="grid-show">
+      <div class="left-content">
+        <div class="image"> <%= image_tag @double.image_URL %></div>
+          <div class="text">
+            <h1><%= @double.name %></h1>
+            <h3> Daily price: <%= @double.price %> $ </h3>
+            <h5><%= @double.address %></h5>
+            <p><%= @double.description %></p>
+          <% if policy(@double).edit? %>
+            <%= link_to "Update", edit_double_path %>
+            <%= link_to "Delete", double_path(@double), method: :delete, data: { confirm:"Are you sure?" } %>
+          <% end %>
+          </div>
+        </div>
+      <div id="booking-form-div"
+        data-bookings="<%= @bookings_dates.to_json %>">
+          <%= simple_form_for [@double, @booking] do |f| %>
+            <%= f.input :start_date, label: "Select your date(s):", as: :string, required: false, input_html: { id: "range_start", class: "d-none"} %>
+            <%= f.input :end_date, label: false, as: :string, required: false, input_html: { id: "range_end", class: "d-none" } %>
+            <%= f.button :submit, "Book", class: "btn-special" %>
+          <% end %>
       </div>
     </div>
-    <% if policy(@double).edit? %>
-      <%= link_to "Update", edit_double_path %>
-      <%= link_to "Delete", double_path(@double), method: :delete, data: { confirm:"Are you sure?" } %>
-    <% end %>
   </div>

@@ -1,0 +1,22 @@
+.main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid-show {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0 40px;
+  grid-template-rows: auto;
+
+  img {
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-shhow {
+    grid-template-columns: 1fr;
+  }
+}
