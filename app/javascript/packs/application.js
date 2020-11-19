@@ -40,7 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   initTabs();
-  initBgcolorCardsIndex();
+  // initBgcolorCardsIndex(); //// for fun random color bg on index cards...
 
   // Smooth Scrolling
   $('.hero a').on('click', function (e) {
