@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="double-image"> <%= image_tag @double.image_URL %></div>
+  <div class="double-image"> <%= cl_image_tag @double.photo.key %></div>
   <div class="main-container my-5">
     <div class="grid-show">
       <div class="left-content">

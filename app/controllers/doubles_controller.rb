@@ -53,11 +53,8 @@ class DoublesController < ApplicationController
   def update
     authorize @double
     @double.user = current_user
-    if @double.save
-      redirect_to double_path
-    else
-      render :new
-    end
+    @double.update(double_params)
+    redirect_to double_path
   end
 
   def destroy
@@ -71,6 +68,6 @@ class DoublesController < ApplicationController
     @double = Double.find(params[:id])
   end
   def double_params
-    params.require(:double).permit(:price, :name, :address, :category)
+    params.require(:double).permit(:price, :name, :address, :category, :photo)
   end
 end

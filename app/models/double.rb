@@ -7,6 +7,8 @@ class Double < ApplicationRecord
   validates :price, :name, :address, presence: true
   validates :category, inclusion: { in: CATEGORIES }
 
+  has_one_attached :photo
+
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
