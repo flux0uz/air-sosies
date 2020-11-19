@@ -29,22 +29,7 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
-
-// Smooth Scrolling
-$('.hero a').on('click', function (e) {
-  if (this.hash !== '') {
-      e.preventDefault();
-
-      const hash = this.hash;
-
-      $('html, body').animate({
-              scrollTop: $(hash).offset().top - 100,
-          },
-          800
-      );
-  }
-});
-//End
+import { initTabs } from '../plugins/init_tabs';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -52,23 +37,21 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initMapbox();
   initAutocomplete();
-  
-  const doppelTab = document.querySelector('#doppel');
-  doppelTab.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.querySelector('#doppel').classList.add('active');
-    document.querySelector('#booking').classList.remove('active');
-    document.querySelector('.doppel').classList.remove('hidden');
-    document.querySelector('.booking').classList.add('hidden');
-  });
-  
-  const bookingTab = document.querySelector('#booking');
-  bookingTab.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.querySelector('#doppel').classList.remove('active');
-    document.querySelector('#booking').classList.add('active');
-    document.querySelector('.doppel').classList.add('hidden');
-    document.querySelector('.booking').classList.remove('hidden');
-  });
+  initTabs();
 
+  // Smooth Scrolling
+  $('.hero a').on('click', function (e) {
+    if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+                scrollTop: $(hash).offset().top - 100,
+            },
+            800
+        );
+    }
+  });
+  //End
 });
