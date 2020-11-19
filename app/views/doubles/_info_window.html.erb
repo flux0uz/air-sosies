@@ -1,2 +1,6 @@
-<h2><%= double.name %></h2>
-<p><%= double.address %></p>
+<div id="popup_content">
+  <%= link_to double_path(double) do %>
+    <h2><%= double.name %></h2>
+    <p><%= double.address %></p>
+  <% end %>
+</div>
