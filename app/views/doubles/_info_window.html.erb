@@ -1,2 +1,18 @@
-<h2><%= double.name %></h2>
-<p><%= double.address %></p>
+<h5>
+  <%= double.name %>
+  <% case %>
+    <% when double.category == "MUSIC" %>
+      <i class="fas fa-music"></i>
+    <% when double.category == "CINEMA" %>
+      <i class="fas fa-film"></i>
+    <% when double.category == "POLITIC" %>
+      <i class="fas fa-handshake"></i>
+    <% when double.category == "COMEDY" %>
+      <i class="fas fa-theater-masks"></i>
+    <% when double.category == "TV" %>
+      <i class="fas fa-tv"></i>
+    <% when double.category == "SPORT" %>
+      <i class="fas fa-futbol"></i>
+  <% end %>
+</h5>
+<p><i class="fas fa-map-marker-alt"></i> <%= double.address %></p>
