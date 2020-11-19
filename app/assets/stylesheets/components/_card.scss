@@ -8,7 +8,9 @@
     height: 200px;
     margin-bottom: 20px;
     overflow: hidden;
-    color: white;
+    h2 {
+      color: $white !important;
+    }
   }
 
   .card {

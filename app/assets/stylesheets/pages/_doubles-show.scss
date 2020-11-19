@@ -1,15 +1,8 @@
-.showhtml {
-  .container {
-    display: flex;
-    img {
-      margin-left: 15px;
-      height: 300px;
-    }
-  .image {
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    }
+.doubles {
+  display: flex;
+  img {
+    margin-left: 15px;
+    height: 300px;
   }
   h3 {
     color: #4E54C5;
@@ -19,4 +12,3 @@
     text-align: justify;
   }
 }
-
