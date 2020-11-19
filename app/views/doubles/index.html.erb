@@ -3,7 +3,7 @@
     <% @doubles.each do |double| %>
       <%= link_to double_path(double) do %>
         <div class="card shadow mb-5 bg-white" style="width: 18rem;">
-          <%= image_tag double.image_URL, class: 'card-img-top' %>
+          <%= cl_image_tag double.photo.key, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title">                
                 <div id="card-name-category">

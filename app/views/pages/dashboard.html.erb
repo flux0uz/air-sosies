@@ -31,7 +31,7 @@
             <p><strong>Total price</strong>: <%= booking.double.price %>€</p>
           </div>
           <div class="dash-card-img">
-            <%= image_tag booking.double.image_URL %>
+            <%= cl_image_tag booking.double.photo.key %>
           </div>
         </div>
       <% end %>
@@ -63,7 +63,7 @@
               </p>
             </div>
             <div class="dash-card-img">
-              <%= image_tag double.image_URL %>
+              <%= cl_image_tag double.photo.key %>
             </div>
           </div>
         <% end %>
