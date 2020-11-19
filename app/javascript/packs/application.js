@@ -31,7 +31,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initTabs } from '../plugins/init_tabs';
 import "../plugins/flatpickr";
-
+import { initBgcolorCardsIndex } from '../plugins/init_bgcolorcardsindex';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -40,6 +40,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   initAutocomplete();
   initTabs();
+  initBgcolorCardsIndex();
 
   // Smooth Scrolling
   $('.hero a').on('click', function (e) {
