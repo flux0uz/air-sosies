@@ -22,13 +22,13 @@
         <div class="dash-card">
           <div class="dash-card-infos">
             <h3><%= booking.double.name %></h3>
-            <p><strong>From</strong> <span class="text-muted"><%= booking.start_date %></span></p>
-            <p><strong>To</strong> <span class="text-muted"><%= booking.end_date %></span></p>
+            <p><strong>From</strong> <span class="text-muted"><%= booking.start_date.to_date %></span></p>
+            <p><strong>To</strong> <span class="text-muted"><%= booking.end_date.to_date %></span></p>
             <p>
               <%= truncate booking.double.description, length: 200 %>
               <%= link_to 'more', double_path(booking.double) %>
             </p>
-            <p><strong>Total price</strong>: <%= booking.double.price %>€</p>
+            <p><strong>Total price</strong>: <%= booking.total_price.to_i %>€</p>
           </div>
           <div class="dash-card-img">
             <%= cl_image_tag booking.double.photo.key %>
