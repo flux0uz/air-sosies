@@ -1,7 +1,28 @@
 .main-container {
   display: flex;
   justify-content: space-around;
+    p {
+    text-align: justify;
+    }
+
+    .title-and-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .buttons {
+      display: flex;
+      margin-left: px;
+      a {
+        color: #111470;
+      }
+    }
 }
+body > div.container > div.main-container.my-5 > div > div.left-content > div > div > div > a:nth-child(2) {
+  color: #FF505D;
+}
+
 
 .grid-show {
   display: grid;
@@ -9,14 +30,9 @@
   gap: 0 40px;
   grid-template-rows: auto;
 
-  img {
-    height: 400px;
-    object-fit: cover;
-    object-position: top;
-  }
 }
 @media only screen and (max-width: 768px) {
-  .grid-shhow {
+  .grid-show {
     grid-template-columns: 1fr;
   }
 }

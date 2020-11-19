@@ -30,31 +30,20 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initTabs } from '../plugins/init_tabs';
+import { calendarForm } from "../plugins/flatpickr";
 import "../plugins/flatpickr";
 import { initBgcolorCardsIndex } from '../plugins/init_bgcolorcardsindex';
+import { initUpdateNavbarOnScroll } from '../plugins/init_update_navbar_on_scroll';
+import { initSmoothScrolling } from '../plugins/init_smooth_scrolling';
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
   initMapbox();
   initAutocomplete();
   initTabs();
   // initBgcolorCardsIndex(); //// for fun random color bg on index cards...
-
-  // Smooth Scrolling
-  $('.hero a').on('click', function (e) {
-    if (this.hash !== '') {
-        e.preventDefault();
-
-        const hash = this.hash;
-
-        $('html, body').animate({
-                scrollTop: $(hash).offset().top - 100,
-            },
-            800
-        );
-    }
-  });
-  //End
+  calendarForm();
+  initUpdateNavbarOnScroll();
+  initSmoothScrolling();
 });

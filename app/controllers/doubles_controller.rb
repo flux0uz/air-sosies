@@ -3,8 +3,8 @@ class DoublesController < ApplicationController
   def index
       @doubles = policy_scope(Double)
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query"
-      @doubles = Double.where(sql_query, query: "%#{params[:query]}%")
+      sql_query = "name ILIKE :query OR description ILIKE :query OR category ILIKE :category"
+      @doubles = Double.where(sql_query, query: "%#{params[:query]}%", category: "%#{params[:category]}%")
     else
       @doubles = Double.all
     end

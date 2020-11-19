@@ -1,17 +1,25 @@
 <div class="container">
+  <div class="double-image"> <%= image_tag @double.image_URL %></div>
   <div class="main-container my-5">
     <div class="grid-show">
       <div class="left-content">
-        <div class="image"> <%= image_tag @double.image_URL %></div>
           <div class="text">
+            <div class="title-and-buttons">
             <h1><%= @double.name %></h1>
-            <h3> Daily price: <%= @double.price %> $ </h3>
+              <div class="buttons">
+                <% if policy(@double).edit? %>
+                  <%= link_to edit_double_path do %>
+                    <%= icon('far', 'edit', class: 'px-2') %>
+                  <% end %>
+                  <%= link_to double_path(@double), method: :delete, data: { confirm:"Are you sure?" } do %>
+                    <%= icon('far', 'trash-alt', class: 'px-2') %>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+            <h3> Daily price: <%= @double.price.to_i %> € </h3>
             <h5><%= @double.address %></h5>
             <p><%= @double.description %></p>
-          <% if policy(@double).edit? %>
-            <%= link_to "Update", edit_double_path %>
-            <%= link_to "Delete", double_path(@double), method: :delete, data: { confirm:"Are you sure?" } %>
-          <% end %>
           </div>
         </div>
       <div id="booking-form-div"
@@ -24,3 +32,4 @@
       </div>
     </div>
   </div>
+</div>
