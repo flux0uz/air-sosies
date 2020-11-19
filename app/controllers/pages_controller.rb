@@ -6,7 +6,6 @@ class PagesController < ApplicationController
 
   def dashboard
     @doubles = current_user.doubles
-    @bookings = current_user.bookings 
+    @bookings = current_user.bookings
   end
-
 end

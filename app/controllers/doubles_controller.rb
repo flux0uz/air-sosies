@@ -1,12 +1,15 @@
 class DoublesController < ApplicationController
   before_action :set_double, only: [:show, :edit, :update, :destroy]
+
   def index
-      @doubles = policy_scope(Double)
     if params[:query].present?
-      sql_query = "name ILIKE :query OR description ILIKE :query OR category ILIKE :category"
-      @doubles = Double.where(sql_query, query: "%#{params[:query]}%", category: "%#{params[:category]}%")
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @doubles = policy_scope(Double).where(sql_query, query: "%#{params[:query]}%")
+    elsif (params[:query] == "" || params[:query].nil?) && params[:category].present?
+      sql_query = "category ILIKE :category"
+      @doubles = policy_scope(Double).where(sql_query, category: "%#{params[:category]}%")
     else
-      @doubles = Double.all
+      @doubles = policy_scope(Double)
     end
     @markers = @doubles.geocoded.map do |double|
       {

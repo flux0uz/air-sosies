@@ -32,7 +32,7 @@
   <div id="categories" class="container my-5">
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Tv") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card tv justify-content-center align-items-center">
               <h2>TV</h2>
@@ -41,7 +41,7 @@
         <% end %>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Cinema") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card cine justify-content-center align-items-center">
               <h2>CINEMA</h2>
@@ -50,7 +50,7 @@
         <% end %>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Comedy") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card comedy justify-content-center align-items-center">
               <h2>COMEDY</h2>
@@ -59,7 +59,7 @@
         <% end %>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Music") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card music justify-content-center align-items-center">
               <h2>MUSIC</h2>
@@ -68,16 +68,16 @@
         <% end %>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Politics") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card politic justify-content-center align-items-center">
-              <h2>POLITIC</h2>
+              <h2>POLITICS</h2>
             </div>
           </div>
         <% end %>
       </div>
       <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path do %>
+        <%= link_to doubles_path(category: "Sport") do %>
           <div class="cards shadow mb-5 bg-white rounded">
             <div class="card sport justify-content-center align-items-center">
               <h2>SPORT</h2>
