@@ -1,8 +1,13 @@
 class DoublesController < ApplicationController
-  before_action :set_double, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_double, only: [:show, :edit, :update, :destroy]
   def index
-    @doubles = policy_scope(Double)
-
+      @doubles = policy_scope(Double)
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR description ILIKE :query"
+      @doubles = Double.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @doubles = Double.all
+    end
     @markers = @doubles.geocoded.map do |double|
       {
         lat: double.latitude,
@@ -15,6 +20,14 @@ class DoublesController < ApplicationController
 
   def show
     authorize @double
+    @booking = Booking.new
+    @bookings = Booking.where(double_id: @double.id)
+    @bookings_dates = @bookings.map do |booking|
+      {
+        from: booking.start_date,
+        to:   booking.end_date
+      }
+    end
   end
 
   def new

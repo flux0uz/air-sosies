@@ -1,6 +1,6 @@
 <div class="container my-5">
   <div class="welcome-heading d-flex justify-content-between align-items-start">
-    <div class="welcome-text">
+    <div class="welcome-text my-5">
       <h1>Hello <%= current_user.username %></h1>
       <h4>Nice to see you again!</h4>
     </div>
@@ -53,6 +53,14 @@
                 <%= link_to 'more', double_path(double) %>
               </p>
               <p><%= double.price %>€ /jour</p>
+              <p>
+                <%= link_to edit_double_path(double) do %>
+                  <%= icon('far', 'edit', class: 'px-2') %>
+                <% end %>
+                <%= link_to double_path(double), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <%= icon('far', 'trash-alt', class: 'px-2') %>
+                <% end %>
+              </p>
             </div>
             <div class="dash-card-img">
               <%= image_tag double.image_URL %>
