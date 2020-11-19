@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  transition: 0.5s background-color ease;
+}
+
+.navbar-lewagon-white {
+  background-color: $white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,11 +22,24 @@
     margin: 0;
   }
 }
-
+    
 .avatar {
   cursor: pointer;
 }
 
 .noHover {
   pointer-events: none;
+}
+    
+.navbar-lewagon-2 {
+  justify-content: space-between;
+  background-color: white;
+}
+
+.navbar-lewagon-2 .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon-2 .navbar-brand img {
+  width: 50px;
 }
