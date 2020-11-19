@@ -2,7 +2,7 @@
   <div class="grid-index">
     <% @doubles.each do |double| %>
       <%= link_to double_path(double) do %>
-        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+        <div class="card shadow p-3 mb-3 bg-white rounded" style="width: 18rem;">
           <%= image_tag double.image_URL, class: 'card-img-top' %>
             <div class="card-body">
               <h5 class="card-title"><%= double.name %></h5>
