@@ -17,12 +17,21 @@
   }
 
   .card {
-    height: 400px;
+    height: 350px;
     .card-body {
       color: #000;
     }
+    transition: all .3s;
+    
+    &:hover,:focus {
+      transform: scale(1.03);
+    }
   }
 
+  #card-name-category {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 768px) {
