@@ -2,7 +2,7 @@
   <%= simple_form_for double do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
-    <%= f.input :price %>
+    <%= f.input :price, :label => "Price per day" %>
     <%= f.input :category, collection: CATEGORIES %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file %>

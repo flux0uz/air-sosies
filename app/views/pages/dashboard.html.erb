@@ -56,7 +56,7 @@
                 <%= truncate double.description, length: 200 %>
                 <%= link_to 'more', double_path(double) %>
               </p>
-              <p><%= double.price %>€ /jour</p>
+              <p><%= double.price.to_i %>€ /day</p>
               <p>
                 <%= link_to edit_double_path(double) do %>
                   <%= icon('far', 'edit', class: 'px-2') %>
