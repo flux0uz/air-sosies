@@ -98,35 +98,35 @@ jacqueson.photo.attach(io: file_11, filename: 'Michel Jacqueson', content_type: 
 puts "SEED 11 OK"
 
 file_12 = URI.open('http://www.alzaprod.com/assets/images/spectacle-de-varietes/agence-de-sosies/Mylene_Farmer/Farmer.jpg')
-jacqueson = Double.new(price: 140, user_id: geronimo.id, name: 'Mylouche Fermier', address: '31 rue Jean Louis Sinet 92330 Sceaux', description: 'As a master of ceremony disturbing resemblance, surrounded by talented and sexy dancers, she offers us a visual show to wish ... The choreographies, the stagings, the sets, the sumptuous costumes transport us into the universe of the most mysterious and famous French singer', category: 'Music')
-jacqueson.save
-jacqueson.photo.attach(io: file_12, filename: 'Mylouche Fermier', content_type: 'image/jpg')
+fermier = Double.new(price: 140, user_id: geronimo.id, name: 'Mylouche Fermier', address: '31 rue Jean Louis Sinet 92330 Sceaux', description: 'As a master of ceremony disturbing resemblance, surrounded by talented and sexy dancers, Mylene offers us a visual show to wish ... The choreographies, the stagings, the sets, the sumptuous costumes transport us into the universe of the most mysterious and famous French singer', category: 'Music')
+fermier.save
+fermier.photo.attach(io: file_12, filename: 'Mylouche Fermier', content_type: 'image/jpg')
 # Double.create(price: 140, user_id: geronimo.id, name: 'Mylouche Fermier', address: '31 rue Jean Louis Sinet 92330 Sceaux', description: 'As a master of ceremony disturbing resemblance, surrounded by talented and sexy dancers, she offers us a visual show to wish ... The choreographies, the stagings, the sets, the sumptuous costumes transport us into the universe of the most mysterious and famous French singer', image_URL: "http://www.alzaprod.com/assets/images/spectacle-de-varietes/agence-de-sosies/Mylene_Farmer/Farmer.jpg", category: 'Music')
 puts "SEED 12 OK"
 
 file_13 = URI.open('https://p0.storage.canalblog.com/05/57/442666/26930235.jpg')
-zizou = Double.new(price: 200, user_id: olivio.id, name: 'Zizou', address: '168 rue de Tondu 33000 Bordeaux', description: 'He\'s the man who put Materrazzi down 14 years ago. Zizouuuuuuuuuuuuuuu! Super quality not so expansive. Enjoy!', category: 'Sport')
+zizou = Double.new(price: 200, user_id: olivio.id, name: 'Zizou', address: '168 rue de Tondu 33000 Bordeaux', description: 'He\'s the man who put Materrazzi down 14 years ago. Zidane AKA Zizouuuuuuuuuuuuuuu! Super quality not so expansive. Enjoy!', category: 'Sport')
 zizou.save
 zizou.photo.attach(io: file_13, filename: 'Zizou', content_type: 'image/jpg')
 # Double.create(price: 200, user_id: olivio.id, name: 'Zizou', address: '168 rue de Tondu 33000 Bordeaux', description: 'He\'s the man who put Materrazzi down 14 years ago. Zizouuuuuuuuuuuuuuu! Super quality not so expansive. Enjoy!' image_URL: "https://p0.storage.canalblog.com/05/57/442666/26930235.jpg", category: 'Sport')
 puts "SEED 13 OK"
 
 file_14 = URI.open('https://www.sofoot.com/IMG/img-1-1457606304_700_440_center_articles-alt-218868.jpg')
-hanouneb = Double.new(price: 180, user_id: olivio.id, name: 'Sylvain Hanouneb', address: '40 rue de Clocheville 37000 Tours', description: 'Okay this one\'s a joke.', category: 'Tv')
+hanouneb = Double.new(price: 180, user_id: olivio.id, name: 'Sylvain Hanouneb', address: '40 rue de Clocheville 37000 Tours', description: 'Okay this one\'s a joke on Hanouna.', category: 'Tv')
 hanouneb.save
 hanouneb.photo.attach(io: file_14, filename: 'Sylvain Hanouneb', content_type: 'image/jpg')
 # Double.create(price: 180, user_id: olivio.id, name: 'Sylvain Hanouneb', address: '40 rue de Clocheville 37000 Tours', description: 'Okay this one\'s a joke.' image_URL: "https://www.sofoot.com/IMG/img-1-1457606304_700_440_center_articles-alt-218868.jpg", category: 'TV')
 puts "SEED 14 OK"
 
 file_15 = URI.open('https://www.pkfoot.com/wp-content/uploads/2013/05/hristo_hristov610-2.jpg')
-zlatoun = Double.new(price: 135, user_id: olivio.id, name: 'Zlatoun', address: '4 rue Charles Liot 92190 Meudon', description: 'Swedish professional footballer who plays as a striker for Serie A club A.C. Milan. Ibrahimovic is widely regarded as one of the best strikers of all time. He is one of the most decorated active footballers in the world having won 31 trophies in his career. He has scored over 560 career goals, and has scored in each of the last four decades.', category: 'Sport')
+zlatoun = Double.new(price: 135, user_id: olivio.id, name: 'Zlatoun', address: '4 rue Charles Liot 92190 Meudon', description: 'Swedish professional footballer who plays as a striker for Serie A club A.C. Milan. Zlatan Ibrahimovic is widely regarded as one of the best strikers of all time. He is one of the most decorated active footballers in the world having won 31 trophies in his career. He has scored over 560 career goals, and has scored in each of the last four decades.', category: 'Sport')
 zlatoun.save
 zlatoun.photo.attach(io: file_15, filename: 'Zlatoun', content_type: 'image/jpg')
 # Double.create(price: 135, user_id: olivio.id, name: 'Zlatoun', address: '4 rue Charles Liot 92190 Meudon', description: 'Swedish professional footballer who plays as a striker for Serie A club A.C. Milan. Ibrahimovic is widely regarded as one of the best strikers of all time. He is one of the most decorated active footballers in the world having won 31 trophies in his career. He has scored over 560 career goals, and has scored in each of the last four decades.', image_URL: "https://p5.storage.canalblog.com/55/85/672899/50719209_p.jpg", category: 'Sport')
 puts "SEED 15 OK"
 
 file_16 = URI.open('https://gal.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2Fvar.2Fgal.2Fstorage.2Fimages.2Fmedia.2Fmultiupload_du_21_juin_2013.2Fhollande-sosie.2F2210822-1-fre-FR.2Fhollande-sosie.2Ejpg/480x480/quality/80/on-a-trouve-le-sosie-de-francois-hollande.jpg')
-françois = Double.new(price: 135, user_id: guigui.id, name: 'Father François', address: '55 Rue du Faubourg Saint-Honoré 75008 Paris', description: 'Me, President.', category: 'Politics')
+françois = Double.new(price: 135, user_id: guigui.id, name: 'Father François', address: '55 Rue du Faubourg Saint-Honoré 75008 Paris', description: 'Former president of France and not Hollande', category: 'Politics')
 françois.save
 françois.photo.attach(io: file_16, filename: 'Father François', content_type: 'image/jpg')
 # Double.create(price: 135, user_id: guigui.id, name: 'Father François', address: '55 Rue du Faubourg Saint-Honoré 75008 Paris', description: 'Me, President.', image_URL: "https://gal.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2Fvar.2Fgal.2Fstorage.2Fimages.2Fmedia.2Fmultiupload_du_21_juin_2013.2Fhollande-sosie.2F2210822-1-fre-FR.2Fhollande-sosie.2Ejpg/480x480/quality/80/on-a-trouve-le-sosie-de-francois-hollande.jpg", category: 'Politics')
