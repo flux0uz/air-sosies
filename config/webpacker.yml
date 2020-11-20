@@ -17,7 +17,7 @@ default: &default
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: true
+  extract_css: false
 
   static_assets_extensions:
     - .jpg
@@ -87,7 +87,7 @@ production:
   <<: *default
 
   # Production depends on precompilation of packs prior to booting for performance.
-  compile: false
+  compile: true
 
   # Extract and emit a css file
   extract_css: true
