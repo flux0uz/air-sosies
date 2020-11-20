@@ -71,6 +71,6 @@ class DoublesController < ApplicationController
     @double = Double.find(params[:id])
   end
   def double_params
-    params.require(:double).permit(:price, :name, :address, :category, :photo)
+    params.require(:double).permit(:price, :name, :address, :category, :description, :photo)
   end
 end

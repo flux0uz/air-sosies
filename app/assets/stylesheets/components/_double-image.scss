@@ -6,3 +6,8 @@
   box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.36);
   }
 }
+
+body > div.content-wrapper > div > div.double-image.alt-img > img {
+  height: 358px;
+  object-fit: contain;
+}
