@@ -1,5 +1,9 @@
 <div class="container">
-  <div class="double-image"> <%= cl_image_tag(@double.photo.key, gravity: "face", crop: "fill") %></div>
+  <% if @double.photo.attached? %>
+    <div class="double-image"> <%= cl_image_tag(@double.photo.key, gravity: "face", crop: "fill") %></div>
+  <% else %>
+    <div class="double-image"> <%= image_tag 'no-photo-placeholder.png' %></div>
+  <% end %>
   <div class="main-container my-5">
     <div class="grid-show">
       <div class="left-content">

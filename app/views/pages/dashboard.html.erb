@@ -31,7 +31,11 @@
             <p><strong>Total price</strong>: <%= booking.total_price.to_i %>€</p>
           </div>
           <div class="dash-card-img">
-            <%= cl_image_tag(booking.double.photo.key, gravity: "face", crop: "fill") %>
+            <% if booking.double.photo.attached? %>
+              <%= cl_image_tag(booking.double.photo.key, gravity: "face", crop: "fill") %>
+            <% else %>
+              <%= imate_tag 'no-photo-placeholder.png' %>
+            <% end %>
           </div>
         </div>
       <% end %>
@@ -63,7 +67,11 @@
               </p>
             </div>
             <div class="dash-card-img">
+            <% if double.photo.attached? %>
               <%= cl_image_tag(double.photo.key, gravity: "face", crop: "fill") %>
+            <% else %>
+              <%= image_tag 'no-photo-placeholder.png' %>
+            <% end %>
             </div>
           </div>
         <% end %>
