@@ -1,36 +1,27 @@
-.main-container {
+body > div.content-wrapper > div > div.grid-show.my-5 > div.left-content > div > div > div > a:nth-child(2) > i{
+  color: red;
+}
+.grid-show {
   display: flex;
-  justify-content: space-around;
-    p {
-    text-align: justify;
-    }
-
-    .title-and-buttons {
+  justify-content: space-between;
+  .left-content{
+    margin-right: 40px;
+  }
+  .title-and-buttons {
       display: flex;
       align-items: center;
       justify-content: space-between;
+  }
+
+  .buttons {
+    display: flex;
+    margin-left: 40px;
+    a {
+      color: #111470;
     }
-
-    .buttons {
-      display: flex;
-      margin-left: px;
-      a {
-        color: #111470;
-      }
-    }
-}
-body > div.container > div.main-container.my-5 > div > div.left-content > div > div > div > a:nth-child(2) {
-  color: #FF505D;
+  }
 }
 
-
-.grid-show {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 0 40px;
-  grid-template-rows: auto;
-
-}
 @media only screen and (max-width: 768px) {
   .grid-show {
     grid-template-columns: 1fr;
