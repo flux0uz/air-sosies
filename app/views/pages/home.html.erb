@@ -6,11 +6,11 @@
       <h1>The best place to rent doubles</h1>
     </div>
     <div class="down-arrow d-flex justify-content-center align-items-end">
-      <a href="#categories"><%= icon('fas','chevron-down') %></a>
+      <a href="#scroll"><%= icon('fas','chevron-down') %></a>
     </div>
   </div>
 
-  <div class="container my-5">
+  <div class="container my-5" id="scroll">
   
     <div class="wrapper mb-5">
       <%= form_tag doubles_path, method: :get, :class => "searchbar-container" do %>
