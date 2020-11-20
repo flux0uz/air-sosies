@@ -10,80 +10,83 @@
     </div>
   </div>
 
-  <div class="wrapper">
-    <%= form_tag doubles_path, method: :get, :class => "searchbar-container" do %>
-    <div class="search-field">
-      <%= text_field_tag :query,
-          params[:query],
-          class: "form-control mb-2 mr-sm-2",
-          placeholder: "Type a celebrity's name"
-      %>
+  <div class="container my-5">
+  
+    <div class="wrapper mb-5">
+      <%= form_tag doubles_path, method: :get, :class => "searchbar-container" do %>
+        <div class="search-field">
+          <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type a celebrity's name"
+          %>
+        </div>
+        <div class="search-field">
+          <%= select_tag "category",
+            options_for_select([ 'Choose category', 'Tv', 'Cinema', 'Comedy', 'Music', 'Politics', 'Sport', 'Animals', 'Others' ], ''),
+            class: "form-control"
+          %>
+        </div>
+        <%= submit_tag "Search", class: "btn-special btnsub" %>
+      <% end %>
     </div>
-    <div class="search-field">
-      <%= select_tag "category",
-        options_for_select([ 'Choose category', 'Tv', 'Cinema', 'Comedy', 'Music', 'Politics', 'Sport', 'Animals', 'Others' ], ''),
-        class: "form-control mb-2 mr-sm-2"
-      %>
-    </div>
-      <%= submit_tag "Search", class: "btn-special btnsub" %>
-    <% end %>
-  </div>
 
-  <div id="categories" class="container my-5">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Tv") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card tv justify-content-center align-items-center">
-              <h2>TV</h2>
+    <div id="categories">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Tv") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card tv justify-content-center align-items-center">
+                <h2>TV</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Cinema") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card cine justify-content-center align-items-center">
-              <h2>CINEMA</h2>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Cinema") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card cine justify-content-center align-items-center">
+                <h2>CINEMA</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Comedy") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card comedy justify-content-center align-items-center">
-              <h2>COMEDY</h2>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Comedy") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card comedy justify-content-center align-items-center">
+                <h2>COMEDY</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Music") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card music justify-content-center align-items-center">
-              <h2>MUSIC</h2>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Music") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card music justify-content-center align-items-center">
+                <h2>MUSIC</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Politics") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card politic justify-content-center align-items-center">
-              <h2>POLITICS</h2>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Politics") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card politic justify-content-center align-items-center">
+                <h2>POLITICS</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <%= link_to doubles_path(category: "Sport") do %>
-          <div class="cards shadow mb-5 bg-white rounded">
-            <div class="card sport justify-content-center align-items-center">
-              <h2>SPORT</h2>
+          <% end %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <%= link_to doubles_path(category: "Sport") do %>
+            <div class="cards shadow mb-5 bg-white rounded">
+              <div class="card sport justify-content-center align-items-center">
+                <h2>SPORT</h2>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
