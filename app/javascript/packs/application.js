@@ -35,6 +35,7 @@ import "../plugins/flatpickr";
 import { initBgcolorCardsIndex } from '../plugins/init_bgcolorcardsindex';
 import { initUpdateNavbarOnScroll } from '../plugins/init_update_navbar_on_scroll';
 import { initSmoothScrolling } from '../plugins/init_smooth_scrolling';
+import { totalPrice } from '../plugins/init_calculate_total_price';
 
 
 document.addEventListener('turbolinks:load', () => {
