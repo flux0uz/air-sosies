@@ -4,12 +4,12 @@ class DoublesController < ApplicationController
   def index
     if params[:query].present?
       sql_query = "name ILIKE :query OR description ILIKE :query"
-      @doubles = policy_scope(Double).where(sql_query, query: "%#{params[:query]}%")
+      @doubles = policy_scope(Double.includes(:photo_attachment)).where(sql_query, query: "%#{params[:query]}%")
     elsif (params[:query] == "" || params[:query].nil?) && params[:category].present?
       sql_query = "category ILIKE :category"
-      @doubles = policy_scope(Double).where(sql_query, category: "%#{params[:category]}%")
+      @doubles = policy_scope(Double.includes(:photo_attachment)).where(sql_query, category: "%#{params[:category]}%")
     else
-      @doubles = policy_scope(Double)
+      @doubles = policy_scope(Double.includes(:photo_attachment))
     end
     @markers = @doubles.geocoded.map do |double|
       {

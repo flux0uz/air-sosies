@@ -41,7 +41,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'letter_opener'
-
+  gem 'bullet'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

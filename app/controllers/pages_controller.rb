@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @doubles = current_user.doubles
+    @doubles = current_user.doubles.includes(:photo_attachment)
     @bookings = current_user.bookings
   end
 end
