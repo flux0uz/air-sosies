@@ -43,6 +43,8 @@ class DoublesController < ApplicationController
     authorize @double
     @double.user = current_user
     if @double.save
+      mail = DoubleMailer.with(double: @double).create_confirmation
+      mail.deliver_now
       redirect_to double_path(@double)
     else
       render :new
